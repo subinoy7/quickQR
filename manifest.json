@@ -1,0 +1,29 @@
+{
+  "name": "URL to Barcode(U2B)",
+  "description" : "URL to barcode converter",
+  "version": "1.0",
+  "manifest_version": 2,
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+F",
+        "mac": "MacCtrl+Shift+F"
+      }
+    }
+  },
+  "browser_action" : {
+    "default_popup": "popup.html",
+    "default_icon": "my_icon.png",
+    "default_title": "U2B Mapper"
+  },
+  "permissions" : [
+    "storage",
+    "contextMenus",
+    "tabs",
+    "<all_urls>"
+  ],
+  "background" : {
+    "scripts" : ["background.js"],
+    "persistent" : false
+  }
+}
